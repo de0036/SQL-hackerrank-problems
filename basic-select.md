@@ -354,7 +354,9 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 **Solution**
 ```sql
-SELECT DISTINCT CITY FROM STATION WHERE UPPER(SUBSTR(CITY, LENGTH(CITY), 1)) NOT IN ('A','E','I','O','U') AND LOWER(SUBSTR(CITY, LENGTH(CITY),1)) NOT IN ('a','e','i','o','u');    
+SELECT DISTINCT CITY FROM STATION 
+WHERE 
+lower(SUBSTR(CITY,LENGTH(CITY),1)) NOT IN ('a', 'e', 'i', 'o', 'u');   
 ```
 
 ###**[Weather Observation Station 11](https://www.hackerrank.com/challenges/weather-observation-station-11/problem)**
